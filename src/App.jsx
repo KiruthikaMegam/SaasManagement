@@ -8,7 +8,7 @@ import {
   Routes
 } from "react-router-dom";
 
-import { SaaSProvider } from "./context/SaaSContext";
+import SaaSProvider from "./context/SaaSContext";
 
 import Login from "./pages/Login";
 import Layout from "./components/Layout";
