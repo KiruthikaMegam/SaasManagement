@@ -571,26 +571,9 @@ const updatePlan = (planId, planData) => {
 
 
 const updateSubscription = (subscriptionId, subscriptionData) => {
-  const updatedSubscriptions = subscriptions.map((subscription) => {
-    if (String(subscription.id) === String(subscriptionId)) {
-      return {
-        ...subscription,
-        ...subscriptionData,
-        id: subscription.id
-      };
-    }
-
-    return subscription;
-  });
-
-  const found = updatedSubscriptions.some(
-    (subscription, index) =>
-      String(subscription.id) === String(subscriptionId) &&
-      JSON.stringify(subscription) !== JSON.stringify(subscriptions[index])
-  );
-
   const exists = subscriptions.some(
-    (subscription) => String(subscription.id) === String(subscriptionId)
+    (subscription) =>
+      String(subscription.id) === String(subscriptionId)
   );
 
   if (!exists) {
@@ -598,15 +581,32 @@ const updateSubscription = (subscriptionId, subscriptionData) => {
     return false;
   }
 
-  localStorage.setItem(
-    "saasSubscriptions",
-    JSON.stringify(updatedSubscriptions)
-  );
+  const updatedSubscriptions = subscriptions.map((subscription) => {
+    if (String(subscription.id) === String(subscriptionId)) {
+      return {
+        ...subscription,
+        ...subscriptionData,
+        id: subscription.id,
+      };
+    }
 
-  setSubscriptions(updatedSubscriptions);
-  showToast("Subscription updated successfully.", "success");
+    return subscription;
+  });
 
-  return true;
+  try {
+    localStorage.setItem(
+      "saasSubscriptions",
+      JSON.stringify(updatedSubscriptions)
+    );
+
+    setSubscriptions(updatedSubscriptions);
+    showToast("Subscription updated successfully.", "success");
+
+    return true;
+  } catch (error) {
+    showToast("Unable to save subscription changes.", "error");
+    return false;
+  }
 };
 
   const cancelSubscription = (
