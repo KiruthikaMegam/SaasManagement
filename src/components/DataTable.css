@@ -1,0 +1,295 @@
+.saas-table-wrapper {
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #ffe1e9;
+  border-radius: 20px;
+
+  box-shadow:
+    0 7px 24px rgba(53, 17, 42, 0.05);
+}
+
+.saas-table-scroll {
+  width: 100%;
+
+  overflow-x: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: #ffb5c6 #fff2f5;
+}
+
+.saas-table-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.saas-table-scroll::-webkit-scrollbar-track {
+  background: #fff2f5;
+}
+
+.saas-table-scroll::-webkit-scrollbar-thumb {
+  background: #ffb5c6;
+
+  border-radius: 999px;
+}
+
+/* Table */
+
+.saas-data-table {
+  width: 100%;
+
+  min-width: 760px;
+
+  border-collapse: collapse;
+
+  font-size: 10px;
+}
+
+/* Header */
+
+.saas-data-table thead {
+  background: #fff7f9;
+}
+
+.saas-data-table th {
+  padding: 14px 14px;
+
+  border-bottom: 1px solid #f5dfe5;
+
+  color: #806b74;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  text-align: left;
+
+  white-space: nowrap;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.3px;
+}
+
+/* Body */
+
+.saas-data-table tbody tr {
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.saas-data-table tbody tr:hover {
+  background: #fffafb;
+}
+
+.saas-data-table td {
+  padding: 13px 14px;
+
+  border-bottom: 1px solid #f5e9ed;
+
+  color: #4f3d45;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  vertical-align: middle;
+
+  white-space: nowrap;
+}
+
+.saas-data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* First column */
+
+.saas-data-table tbody td:first-child {
+  color: #35112a;
+
+  font-weight: 800;
+}
+
+/* Actions */
+
+.saas-table-actions-heading {
+  text-align: center !important;
+}
+
+.saas-table-actions {
+  min-width: 120px;
+
+  text-align: center;
+}
+
+.saas-table-action {
+  width: 29px;
+  height: 29px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 2px;
+
+  border: 1px solid transparent;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.saas-table-action img {
+  width: 13px;
+  height: 13px;
+
+  object-fit: contain;
+}
+
+.saas-table-action:hover {
+  transform: translateY(-2px);
+}
+
+/* View */
+
+.saas-table-view {
+  background: #f1f6ff;
+
+  border-color: #dce8ff;
+}
+
+.saas-table-view:hover {
+  background: #e5efff;
+
+  border-color: #bcd3ff;
+}
+
+/* Edit */
+
+.saas-table-edit {
+  background: #fff8e9;
+
+  border-color: #f8e5b7;
+}
+
+.saas-table-edit:hover {
+  background: #fff2d4;
+
+  border-color: #efd18b;
+}
+
+/* Delete */
+
+.saas-table-delete {
+  background: #fff1f3;
+
+  border-color: #ffd9df;
+}
+
+.saas-table-delete:hover {
+  background: #ffe4e9;
+
+  border-color: #ffbbc7;
+}
+
+/* Empty */
+
+.saas-table-empty {
+  height: 180px;
+
+  text-align: center !important;
+}
+
+.saas-table-empty-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.saas-table-empty-circle {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff0f4;
+
+  color: #ff4e7c;
+
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.saas-table-empty-content p {
+  margin: 0;
+
+  color: #9a858e;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .saas-table-wrapper {
+    border-radius: 17px;
+  }
+
+  .saas-data-table th {
+    padding: 12px;
+  }
+
+  .saas-data-table td {
+    padding: 12px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .saas-table-wrapper {
+    border-radius: 15px;
+  }
+
+  .saas-data-table {
+    min-width: 700px;
+  }
+
+  .saas-data-table th {
+    padding: 11px;
+
+    font-size: 8px;
+  }
+
+  .saas-data-table td {
+    padding: 11px;
+
+    font-size: 9px;
+  }
+
+  .saas-table-action {
+    width: 28px;
+    height: 28px;
+  }
+
+  .saas-table-action img {
+    width: 12px;
+    height: 12px;
+  }
+}

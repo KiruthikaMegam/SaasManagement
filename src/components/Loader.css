@@ -1,0 +1,168 @@
+.saas-loader {
+  width: 100%;
+
+  min-height: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+}
+
+.saas-loader-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  min-width: 150px;
+
+  padding: 22px 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #ffe1e9;
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px rgba(53, 17, 42, 0.07);
+}
+
+/* Animation */
+
+.saas-loader-animation {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  height: 28px;
+}
+
+.saas-loader-animation span {
+  width: 6px;
+  height: 22px;
+
+  display: block;
+
+  border-radius: 999px;
+
+  background: #ff4e7c;
+
+  animation: saasLoaderBars 1s ease-in-out infinite;
+}
+
+.saas-loader-animation span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.saas-loader-animation span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.saas-loader-animation span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes saasLoaderBars {
+  0%,
+  100% {
+    height: 9px;
+
+    opacity: 0.4;
+  }
+
+  50% {
+    height: 25px;
+
+    opacity: 1;
+  }
+}
+
+/* Text */
+
+.saas-loader-card p {
+  margin: 0;
+
+  color: #806b74;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+}
+
+/* Full screen */
+
+.saas-loader-fullscreen {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1500;
+
+  min-height: 100vh;
+
+  background: #ff4e7c;
+}
+
+.saas-loader-fullscreen .saas-loader-card {
+  min-width: 180px;
+
+  padding: 27px 30px;
+
+  border: none;
+
+  box-shadow:
+    0 20px 50px rgba(53, 17, 42, 0.2);
+}
+
+.saas-loader-fullscreen .saas-loader-animation span {
+  background: #35112a;
+}
+
+.saas-loader-fullscreen .saas-loader-card p {
+  color: #35112a;
+}
+
+/* Small loader area */
+
+.saas-loader-small {
+  min-height: 100px;
+
+  padding: 20px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .saas-loader {
+    min-height: 150px;
+
+    padding: 20px;
+  }
+
+  .saas-loader-card {
+    min-width: 135px;
+
+    padding: 18px 20px;
+
+    border-radius: 15px;
+  }
+
+  .saas-loader-animation {
+    height: 24px;
+  }
+
+  .saas-loader-animation span {
+    width: 5px;
+  }
+
+  .saas-loader-card p {
+    font-size: 9px;
+  }
+}

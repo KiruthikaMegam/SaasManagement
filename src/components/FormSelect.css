@@ -1,0 +1,162 @@
+.saas-form-select-group {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.saas-form-select-group label {
+  display: flex;
+  align-items: center;
+
+  gap: 3px;
+
+  color: #35112a;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.saas-form-select-group label b {
+  color: #ff4e7c;
+
+  font-size: 11px;
+}
+
+/* Select */
+
+.saas-form-select {
+  width: 100%;
+  min-height: 44px;
+
+  box-sizing: border-box;
+
+  padding: 0 36px 0 13px;
+
+  border: 1px solid #f0dce2;
+  border-radius: 11px;
+
+  outline: none;
+
+  background-color: #fff8fa;
+
+  color: #35112a;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  appearance: none;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, #ff4e7c 50%),
+    linear-gradient(135deg, #ff4e7c 50%, transparent 50%);
+
+  background-position:
+    calc(100% - 16px) 19px,
+    calc(100% - 11px) 19px;
+
+  background-size:
+    5px 5px,
+    5px 5px;
+
+  background-repeat: no-repeat;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.saas-form-select:hover {
+  border-color: #ffc0cf;
+}
+
+.saas-form-select:focus {
+  border-color: #ff4e7c;
+
+  background-color: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(255, 78, 124, 0.1);
+}
+
+.saas-form-select option {
+  background: #ffffff;
+
+  color: #35112a;
+
+  font-size: 10px;
+}
+
+/* Error */
+
+.saas-form-select-error {
+  border-color: #e5485d;
+
+  background-color: #fff5f6;
+}
+
+.saas-form-select-error:focus {
+  border-color: #e5485d;
+
+  box-shadow:
+    0 0 0 3px rgba(229, 72, 93, 0.1);
+}
+
+.saas-form-select-error-text {
+  color: #d9364b;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+/* Helper */
+
+.saas-form-select-helper {
+  color: #a08d95;
+
+  font-size: 9px;
+  font-weight: 500;
+
+  line-height: 1.4;
+}
+
+/* Disabled */
+
+.saas-form-select:disabled {
+  background-color: #f4eef1;
+
+  color: #a998a0;
+
+  cursor: not-allowed;
+
+  opacity: 0.75;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .saas-form-select {
+    min-height: 42px;
+
+    padding-left: 11px;
+
+    font-size: 10px;
+
+    background-position:
+      calc(100% - 15px) 18px,
+      calc(100% - 10px) 18px;
+  }
+
+  .saas-form-select-group label {
+    font-size: 9px;
+  }
+}

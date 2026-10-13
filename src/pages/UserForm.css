@@ -1,0 +1,264 @@
+.saas-user-form-page {
+  width: 100%;
+  animation: saasUserFormEnter 0.45s ease;
+}
+
+@keyframes saasUserFormEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.saas-user-form-header {
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.saas-user-form-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.saas-user-form-title-icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background: #ffe8ef;
+  box-shadow: 0 8px 20px rgba(255, 78, 124, 0.12);
+}
+
+.saas-user-form-title-icon img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+}
+
+.saas-user-form-title h1 {
+  color: #35112a;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.saas-user-form-title p {
+  margin-top: 5px;
+  color: #8f6579;
+  font-size: 13px;
+}
+
+.saas-user-form-card {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #f1dce4;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(53, 17, 42, 0.06);
+}
+
+.saas-user-form-section {
+  width: 100%;
+  padding: 25px;
+  border-bottom: 1px solid #f3e3e9;
+  box-sizing: border-box;
+}
+
+.saas-user-form-section:last-of-type {
+  border-bottom: 0;
+}
+
+.saas-user-form-section-heading {
+  margin-bottom: 20px;
+}
+
+.saas-user-form-section-heading h2 {
+  color: #35112a;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.saas-user-form-section-heading p {
+  margin-top: 4px;
+  color: #987184;
+  font-size: 11px;
+}
+
+.saas-user-form-fields {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 20px;
+}
+
+.saas-user-form-fields > * {
+  width: calc(50% - 10px);
+  min-width: 0;
+}
+
+.saas-user-form-single-field {
+  width: 50%;
+}
+
+.saas-user-form-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 18px 25px;
+  background: #fffafb;
+  box-sizing: border-box;
+}
+
+.saas-user-form-cancel,
+.saas-user-form-save {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 17px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.saas-user-form-cancel {
+  border: 1px solid #ead3dc;
+  background: #ffffff;
+  color: #70455a;
+}
+
+.saas-user-form-save {
+  border: 0;
+  background: #ff4e7c;
+  color: #ffffff;
+  box-shadow: 0 7px 18px rgba(255, 78, 124, 0.2);
+}
+
+.saas-user-form-cancel img,
+.saas-user-form-save img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+
+.saas-user-form-save img {
+  filter: brightness(0) invert(1);
+}
+
+.saas-user-form-cancel:hover,
+.saas-user-form-save:hover {
+  transform: translateY(-2px);
+}
+
+.saas-user-form-cancel:hover {
+  background: #fff4f7;
+  border-color: #ffb3c6;
+}
+
+.saas-user-form-save:hover {
+  background: #ed3d6d;
+  box-shadow: 0 10px 22px rgba(255, 78, 124, 0.27);
+}
+
+.saas-user-form-state {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.saas-user-form-back {
+  min-height: 40px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 10px;
+  background: #ff4e7c;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .saas-user-form-section {
+    padding: 20px;
+  }
+
+  .saas-user-form-fields {
+    flex-direction: column;
+  }
+
+  .saas-user-form-fields > * {
+    width: 100%;
+  }
+
+  .saas-user-form-single-field {
+    width: 100%;
+  }
+
+  .saas-user-form-footer {
+    padding: 16px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .saas-user-form-title {
+    align-items: flex-start;
+  }
+
+  .saas-user-form-title-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+  .saas-user-form-title-icon img {
+    width: 23px;
+    height: 23px;
+  }
+
+  .saas-user-form-title h1 {
+    font-size: 23px;
+  }
+
+  .saas-user-form-title p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .saas-user-form-card {
+    border-radius: 16px;
+  }
+
+  .saas-user-form-section {
+    padding: 16px;
+  }
+
+  .saas-user-form-footer {
+    align-items: stretch;
+    flex-direction: column-reverse;
+    padding: 15px 16px;
+  }
+
+  .saas-user-form-cancel,
+  .saas-user-form-save {
+    width: 100%;
+  }
+}

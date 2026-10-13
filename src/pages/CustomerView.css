@@ -1,0 +1,771 @@
+.customer-view-page {
+  width: 100%;
+  min-width: 0;
+  padding: 24px;
+  color: #292638;
+  box-sizing: border-box;
+  animation: customerPageFade 0.35s ease;
+}
+
+.customer-view-page * {
+  box-sizing: border-box;
+}
+
+@keyframes customerPageFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   BACK AND EDIT HEADER
+======================================== */
+
+.customer-view-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.customer-back-button,
+.customer-edit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 43px;
+  padding: 11px 16px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.customer-back-button {
+  color: #414052;
+  background: #ffffff;
+  border: 1px solid #e3e4eb;
+}
+
+.customer-back-button img {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+}
+
+.customer-back-button:hover {
+  color: #ff4e7c;
+  background: #fff0f4;
+  border-color: #ff4e7c;
+  transform: translateY(-1px);
+}
+
+.customer-edit-button {
+  color: #ffffff;
+  background: #ff4e7c;
+  border: 1px solid #ff4e7c;
+}
+
+.customer-edit-button img {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.customer-edit-button:hover {
+  background: #ed3568;
+  border-color: #ed3568;
+  box-shadow: 0 5px 14px rgba(255, 78, 124, 0.22);
+  transform: translateY(-1px);
+}
+
+.customer-back-button:focus-visible,
+.customer-edit-button:focus-visible {
+  outline: 3px solid rgba(255, 78, 124, 0.25);
+  outline-offset: 3px;
+}
+
+/* ========================================
+   CUSTOMER PROFILE CARD
+======================================== */
+
+.customer-profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  padding: 28px;
+  margin-bottom: 24px;
+  background: #ffffff;
+  border: 1px solid #f0eaf0;
+  border-radius: 18px;
+  box-shadow: 0 5px 22px rgba(37, 25, 54, 0.04);
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.customer-profile-card:hover {
+  box-shadow: 0 9px 28px rgba(37, 25, 54, 0.07);
+}
+
+.customer-profile-main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 0;
+}
+
+.customer-large-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 86px;
+  height: 86px;
+  overflow: hidden;
+  background: #fff0f4;
+  border: 1px solid #ffd3df;
+  border-radius: 18px;
+}
+
+.customer-large-avatar img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.customer-profile-content {
+  min-width: 0;
+}
+
+.customer-profile-content h2 {
+  margin: 0 0 7px;
+  color: #292638;
+  font-size: 25px;
+  font-weight: 750;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.customer-profile-content p {
+  margin: 0 0 13px;
+  color: #777589;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.customer-profile-status {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Monthly recurring revenue */
+
+.customer-profile-mrr {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 8px;
+  padding-left: 24px;
+  border-left: 1px solid #eeeaf1;
+}
+
+.customer-profile-mrr span {
+  color: #777589;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.customer-profile-mrr strong {
+  color: #ff4e7c;
+  font-size: 29px;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+/* ========================================
+   CUSTOMER AND ACCOUNT INFORMATION GRID
+======================================== */
+
+.customer-view-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+/* Information cards */
+
+.customer-detail-card,
+.customer-subscriptions-card {
+  min-width: 0;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #f0eaf0;
+  border-radius: 16px;
+  box-shadow: 0 5px 22px rgba(37, 25, 54, 0.035);
+  transition:
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.customer-detail-card:hover,
+.customer-subscriptions-card:hover {
+  border-color: #f8d4df;
+  box-shadow: 0 8px 25px rgba(37, 25, 54, 0.06);
+}
+
+/* Card heading */
+
+.customer-detail-card-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+  margin-bottom: 22px;
+}
+
+.customer-detail-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  background: #fff0f4;
+  border-radius: 12px;
+}
+
+.customer-detail-card-icon img {
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
+}
+
+.customer-detail-card-header > div:last-child {
+  min-width: 0;
+}
+
+.customer-detail-card-header h2 {
+  margin: 0 0 5px;
+  color: #292638;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.customer-detail-card-header p {
+  margin: 0;
+  color: #89869a;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ========================================
+   INFORMATION ROWS
+======================================== */
+
+.customer-detail-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.customer-detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 49px;
+  padding: 13px 0;
+  border-bottom: 1px solid #f0edf2;
+}
+
+.customer-detail-row:first-child {
+  padding-top: 0;
+}
+
+.customer-detail-row:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.customer-detail-row > span {
+  flex: 0 0 auto;
+  color: #858296;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.customer-detail-row > strong {
+  min-width: 0;
+  color: #353246;
+  font-size: 13px;
+  font-weight: 650;
+  text-align: right;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   SUBSCRIPTION HISTORY CARD
+======================================== */
+
+.customer-subscriptions-card {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.customer-subscriptions-card > .customer-detail-card-header {
+  margin-bottom: 24px;
+}
+
+/* Empty subscription state */
+
+.customer-no-subscriptions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  padding: 28px 16px;
+  text-align: center;
+  background: #fffafd;
+  border: 1px dashed #f0d9e1;
+  border-radius: 12px;
+}
+
+.customer-no-subscriptions img {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 14px;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+.customer-no-subscriptions h3 {
+  margin: 0 0 8px;
+  color: #353246;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.customer-no-subscriptions p {
+  max-width: 360px;
+  margin: 0;
+  color: #89869a;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   SUBSCRIPTION LIST
+======================================== */
+
+.customer-subscription-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.customer-subscription-item {
+  display: grid;
+  grid-template-columns: 44px minmax(120px, 1.4fr) minmax(90px, 1fr) minmax(90px, 1fr) minmax(90px, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 17px;
+  background: #ffffff;
+  border: 1px solid #efedf2;
+  border-radius: 12px;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.customer-subscription-item:hover {
+  background: #fffafd;
+  border-color: #ffc4d4;
+  box-shadow: 0 5px 16px rgba(37, 25, 54, 0.04);
+  transform: translateY(-2px);
+}
+
+/* Subscription icon */
+
+.customer-subscription-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: #fff0f4;
+  border-radius: 11px;
+}
+
+.customer-subscription-icon img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* Subscription plan information */
+
+.customer-subscription-info,
+.customer-subscription-amount,
+.customer-subscription-date,
+.customer-subscription-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 0;
+  gap: 6px;
+}
+
+.customer-subscription-info strong,
+.customer-subscription-amount strong,
+.customer-subscription-date strong {
+  max-width: 100%;
+  color: #353246;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.customer-subscription-info span,
+.customer-subscription-amount span,
+.customer-subscription-date span {
+  color: #89869a;
+  font-size: 11px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.customer-subscription-amount strong {
+  color: #ff4e7c;
+}
+
+.customer-subscription-status {
+  align-items: flex-end;
+}
+
+/* ========================================
+   LOADING AND ERROR STATES
+======================================== */
+
+.customer-view-page > .customer-back-button {
+  margin-top: 18px;
+}
+
+.customer-view-page > .customer-back-button img {
+  display: block;
+}
+
+.customer-view-page > .customer-back-button:only-child {
+  margin-top: 0;
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 1100px) {
+  .customer-view-page {
+    padding: 20px;
+  }
+
+  .customer-view-grid {
+    gap: 18px;
+  }
+
+  .customer-detail-card,
+  .customer-subscriptions-card {
+    padding: 20px;
+  }
+
+  .customer-subscription-item {
+    grid-template-columns: 42px minmax(110px, 1.4fr) minmax(80px, 1fr) minmax(80px, 1fr);
+    gap: 14px;
+  }
+
+  .customer-subscription-date {
+    align-items: flex-start;
+  }
+
+  .customer-subscription-status {
+    align-items: flex-start;
+  }
+}
+
+/* ========================================
+   SMALL TABLET
+======================================== */
+
+@media (max-width: 768px) {
+  .customer-view-page {
+    padding: 16px;
+  }
+
+  .customer-view-header {
+    margin-bottom: 18px;
+  }
+
+  .customer-profile-card {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+    padding: 22px;
+  }
+
+  .customer-profile-mrr {
+    align-items: flex-start;
+    width: 100%;
+    padding: 18px 0 0;
+    border-top: 1px solid #eeeaf1;
+    border-left: none;
+  }
+
+  .customer-profile-mrr span {
+    text-align: left;
+  }
+
+  .customer-profile-mrr strong {
+    font-size: 26px;
+  }
+
+  .customer-view-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .customer-subscription-item {
+    grid-template-columns: 42px minmax(0, 1fr) minmax(0, 1fr);
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .customer-subscription-icon {
+    grid-row: span 1;
+  }
+
+  .customer-subscription-status {
+    grid-column: 2 / -1;
+    align-items: flex-start;
+  }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 480px) {
+  .customer-view-page {
+    padding: 12px;
+  }
+
+  .customer-view-header {
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .customer-back-button,
+  .customer-edit-button {
+    gap: 6px;
+    min-height: 40px;
+    padding: 9px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .customer-back-button img,
+  .customer-edit-button img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .customer-profile-card {
+    padding: 17px;
+    margin-bottom: 16px;
+    border-radius: 14px;
+  }
+
+  .customer-profile-main {
+    align-items: flex-start;
+    gap: 13px;
+  }
+
+  .customer-large-avatar {
+    width: 62px;
+    height: 62px;
+    border-radius: 13px;
+  }
+
+  .customer-large-avatar img {
+    width: 33px;
+    height: 33px;
+  }
+
+  .customer-profile-content h2 {
+    font-size: 19px;
+  }
+
+  .customer-profile-content p {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  .customer-profile-mrr strong {
+    font-size: 24px;
+  }
+
+  .customer-detail-card,
+  .customer-subscriptions-card {
+    padding: 17px;
+    border-radius: 14px;
+  }
+
+  .customer-view-grid {
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .customer-detail-card-header {
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .customer-detail-card-icon {
+    width: 39px;
+    height: 39px;
+  }
+
+  .customer-detail-card-icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .customer-detail-card-header h2 {
+    font-size: 15px;
+  }
+
+  .customer-detail-card-header p {
+    font-size: 11px;
+  }
+
+  .customer-detail-row {
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+  }
+
+  .customer-detail-row > span,
+  .customer-detail-row > strong {
+    font-size: 12px;
+  }
+
+  .customer-detail-row > span {
+    max-width: 43%;
+  }
+
+  .customer-detail-row > strong {
+    overflow-wrap: anywhere;
+  }
+
+  .customer-subscriptions-card > .customer-detail-card-header {
+    margin-bottom: 18px;
+  }
+
+  .customer-subscription-item {
+    grid-template-columns: 36px minmax(0, 1fr) minmax(0, 1fr);
+    gap: 12px;
+    padding: 13px;
+  }
+
+  .customer-subscription-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .customer-subscription-icon img {
+    width: 19px;
+    height: 19px;
+  }
+
+  .customer-subscription-info strong,
+  .customer-subscription-amount strong,
+  .customer-subscription-date strong {
+    font-size: 12px;
+  }
+
+  .customer-subscription-info span,
+  .customer-subscription-amount span,
+  .customer-subscription-date span {
+    font-size: 10px;
+  }
+
+  .customer-subscription-status {
+    grid-column: 2 / -1;
+  }
+
+  .customer-no-subscriptions {
+    min-height: 190px;
+    padding: 22px 12px;
+  }
+
+  .customer-no-subscriptions h3 {
+    font-size: 14px;
+  }
+
+  .customer-no-subscriptions p {
+    font-size: 12px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .customer-view-page,
+  .customer-profile-card,
+  .customer-detail-card,
+  .customer-subscriptions-card,
+  .customer-subscription-item,
+  .customer-back-button,
+  .customer-edit-button {
+    animation: none;
+    transition: none;
+  }
+}

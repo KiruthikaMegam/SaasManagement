@@ -1,0 +1,792 @@
+/* =========================================
+   PLAN VIEW PAGE
+========================================= */
+
+.plan-view-page {
+  width: 100%;
+  min-height: 100%;
+  padding: 24px;
+  background: #fff8fa;
+  color: #35112a;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.plan-view-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.plan-view-back-button,
+.plan-view-edit-button {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 650;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.plan-view-back-button {
+  padding: 0 13px;
+  border: 1px solid #ecd8e0;
+  background: #ffffff;
+  color: #654456;
+}
+
+.plan-view-back-button:hover {
+  border-color: #ff4e7c;
+  background: #fff0f4;
+  color: #e93768;
+  transform: translateX(-2px);
+}
+
+.plan-view-back-button img {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+}
+
+.plan-view-edit-button {
+  padding: 0 16px;
+  border: 1px solid #ff4e7c;
+  background: #ff4e7c;
+  color: #ffffff;
+  box-shadow: 0 6px 15px rgba(255, 78, 124, 0.2);
+}
+
+.plan-view-edit-button:hover {
+  background: #f23869;
+  transform: translateY(-2px);
+}
+
+.plan-view-edit-button img {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.plan-view-hero {
+  width: 100%;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+  padding: 22px;
+  border: 1px solid #f5dce5;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 5px 18px rgba(100, 38, 65, 0.05);
+}
+
+.plan-view-hero-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+}
+
+.plan-view-plan-icon {
+  width: 62px;
+  height: 62px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background: #ffe5ec;
+}
+
+.plan-view-plan-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.plan-view-name-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.plan-view-name-row h1 {
+  margin: 0;
+  color: #35112a;
+  font-size: 25px;
+  font-weight: 750;
+}
+
+.plan-view-hero-left p {
+  max-width: 700px;
+  margin-top: 6px;
+  color: #8e6c7d;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.plan-view-popular {
+  display: inline-flex;
+  align-items: center;
+  min-height: 25px;
+  padding: 0 9px;
+  border-radius: 20px;
+  background: #ffe0e9;
+  color: #e52f62;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.plan-view-status {
+  flex-shrink: 0;
+}
+
+/* =========================================
+   OVERVIEW
+========================================= */
+
+.plan-view-overview {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.plan-view-overview-card {
+  flex: 1 1 200px;
+  min-height: 95px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 17px;
+  border: 1px solid #f5dce5;
+  border-radius: 13px;
+  background: #ffffff;
+  box-shadow: 0 5px 18px rgba(100, 38, 65, 0.04);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.plan-view-overview-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 22px rgba(100, 38, 65, 0.07);
+}
+
+.plan-view-overview-icon {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #fff0f4;
+}
+
+.plan-view-overview-icon img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.plan-view-overview-card span {
+  display: block;
+  margin-bottom: 5px;
+  color: #947386;
+  font-size: 12px;
+}
+
+.plan-view-overview-card strong {
+  display: block;
+  color: #35112a;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.plan-view-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+.plan-view-section {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #f5dce5;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 5px 18px rgba(100, 38, 65, 0.04);
+}
+
+.plan-view-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.plan-view-section-title {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.plan-view-section-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #fff0f4;
+}
+
+.plan-view-section-icon img {
+  width: 19px;
+  height: 19px;
+  object-fit: contain;
+}
+
+.plan-view-section-title h2 {
+  margin: 0;
+  color: #35112a;
+  font-size: 16px;
+  font-weight: 720;
+}
+
+.plan-view-section-title p {
+  margin-top: 3px;
+  color: #987687;
+  font-size: 11px;
+}
+
+.plan-view-section-action {
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid #f1cbd7;
+  border-radius: 8px;
+  background: #fff5f7;
+  color: #e93768;
+  font-size: 12px;
+  font-weight: 650;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.plan-view-section-action:hover {
+  background: #ffe8ef;
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   INFORMATION
+========================================= */
+
+.plan-view-info-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.plan-view-info-item {
+  width: 50%;
+  min-height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px 18px;
+  border-bottom: 1px solid #f5e5ea;
+}
+
+.plan-view-info-item:nth-child(odd) {
+  border-right: 1px solid #f5e5ea;
+}
+
+.plan-view-info-item:nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+.plan-view-info-item span {
+  margin-bottom: 5px;
+  color: #977789;
+  font-size: 11px;
+}
+
+.plan-view-info-item strong {
+  color: #422133;
+  font-size: 13px;
+  font-weight: 680;
+}
+
+/* =========================================
+   LIMITS
+========================================= */
+
+.plan-view-limits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.plan-view-limit-card {
+  flex: 1 1 200px;
+  min-height: 120px;
+  padding: 17px;
+  border: 1px solid #f3dfe6;
+  border-radius: 12px;
+  background: #fffafb;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.plan-view-limit-card:hover {
+  border-color: #f3bfd0;
+  transform: translateY(-2px);
+}
+
+.plan-view-limit-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: #8f6d7e;
+  font-size: 12px;
+}
+
+.plan-view-limit-card strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #35112a;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.plan-view-limit-card small {
+  color: #a08694;
+  font-size: 11px;
+}
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.plan-view-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.plan-view-feature {
+  flex: 1 1 280px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 12px;
+  border: 1px solid #f2dfe5;
+  border-radius: 9px;
+  background: #fffafb;
+  color: #573448;
+  font-size: 12px;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.plan-view-feature:hover {
+  background: #fff3f6;
+  transform: translateY(-1px);
+}
+
+.plan-view-feature-check {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ffe0e9;
+  color: #e93466;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.plan-view-empty-features {
+  width: 100%;
+  padding: 20px;
+  border: 1px dashed #e8cbd5;
+  border-radius: 10px;
+  background: #fffafb;
+  color: #947586;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* =========================================
+   SUBSCRIPTIONS
+========================================= */
+
+.plan-view-subscriptions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-view-subscription-row {
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 4px;
+  border-bottom: 1px solid #f5e5ea;
+}
+
+.plan-view-subscription-row:last-child {
+  border-bottom: 0;
+}
+
+.plan-view-subscription-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: #fff0f4;
+}
+
+.plan-view-subscription-icon img {
+  width: 19px;
+  height: 19px;
+  object-fit: contain;
+}
+
+.plan-view-subscription-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.plan-view-subscription-main strong {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 3px;
+  color: #432135;
+  font-size: 12px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.plan-view-subscription-main span {
+  display: block;
+  color: #9a7c8b;
+  font-size: 11px;
+}
+
+.plan-view-subscription-amount {
+  min-width: 80px;
+  text-align: right;
+}
+
+.plan-view-subscription-amount strong {
+  color: #35112a;
+  font-size: 12px;
+}
+
+.plan-view-subscription-view {
+  min-width: 50px;
+  height: 31px;
+  padding: 0 9px;
+  border: 1px solid #efd4de;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #df3565;
+  font-size: 11px;
+  font-weight: 650;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.plan-view-subscription-view:hover {
+  border-color: #ff4e7c;
+  background: #fff0f4;
+}
+
+.plan-view-empty-subscriptions {
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px dashed #e8cbd5;
+  border-radius: 10px;
+  background: #fffafb;
+  color: #947586;
+  font-size: 12px;
+  text-align: center;
+}
+
+.plan-view-empty-subscriptions img {
+  width: 25px;
+  height: 25px;
+  opacity: 0.65;
+}
+
+/* =========================================
+   NOT FOUND
+========================================= */
+
+.plan-view-not-found {
+  width: 100%;
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  border: 1px solid #f5dce5;
+  border-radius: 15px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.plan-view-not-found-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  border-radius: 18px;
+  background: #ffe6ed;
+}
+
+.plan-view-not-found-icon img {
+  width: 35px;
+  height: 35px;
+}
+
+.plan-view-not-found h2 {
+  margin: 0 0 8px;
+  color: #35112a;
+  font-size: 20px;
+}
+
+.plan-view-not-found p {
+  max-width: 420px;
+  margin-bottom: 20px;
+  color: #927384;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.plan-view-not-found button {
+  min-height: 40px;
+  padding: 0 17px;
+  border: 0;
+  border-radius: 9px;
+  background: #ff4e7c;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 650;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.plan-view-not-found button:hover {
+  background: #f23869;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .plan-view-page {
+    padding: 20px;
+  }
+
+  .plan-view-overview-card {
+    flex: 1 1 220px;
+  }
+
+  .plan-view-info-item {
+    width: 50%;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+  .plan-view-page {
+    padding: 15px;
+  }
+
+  .plan-view-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .plan-view-back-button,
+  .plan-view-edit-button {
+    width: 100%;
+  }
+
+  .plan-view-header-actions {
+    width: 100%;
+  }
+
+  .plan-view-hero {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .plan-view-status {
+    align-self: flex-start;
+  }
+
+  .plan-view-name-row h1 {
+    font-size: 21px;
+  }
+
+  .plan-view-hero-left {
+    align-items: flex-start;
+  }
+
+  .plan-view-overview {
+    flex-direction: column;
+  }
+
+  .plan-view-overview-card {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .plan-view-section {
+    padding: 16px;
+  }
+
+  .plan-view-section-header {
+    align-items: flex-start;
+  }
+
+  .plan-view-info-item {
+    width: 100%;
+    border-right: 0 !important;
+  }
+
+  .plan-view-info-item:nth-last-child(-n + 2) {
+    border-bottom: 1px solid #f5e5ea;
+  }
+
+  .plan-view-info-item:last-child {
+    border-bottom: 0;
+  }
+
+  .plan-view-limit-card {
+    flex: 1 1 100%;
+  }
+
+  .plan-view-feature {
+    flex: 1 1 100%;
+  }
+
+  .plan-view-subscription-row {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .plan-view-subscription-main {
+    min-width: calc(100% - 52px);
+  }
+
+  .plan-view-subscription-amount {
+    margin-left: 50px;
+    text-align: left;
+  }
+
+  .plan-view-subscription-row .status-badge {
+    margin-left: 50px;
+  }
+
+  .plan-view-subscription-view {
+    margin-left: auto;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+  .plan-view-page {
+    padding: 12px;
+  }
+
+  .plan-view-section {
+    padding: 14px;
+  }
+
+  .plan-view-plan-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .plan-view-plan-icon img {
+    width: 27px;
+    height: 27px;
+  }
+
+  .plan-view-name-row h1 {
+    font-size: 19px;
+  }
+
+  .plan-view-overview-card {
+    padding: 14px;
+  }
+
+  .plan-view-overview-card strong {
+    font-size: 18px;
+  }
+}

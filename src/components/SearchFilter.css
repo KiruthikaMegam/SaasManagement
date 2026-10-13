@@ -1,0 +1,343 @@
+.saas-search-filter {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  box-sizing: border-box;
+}
+
+/* =========================
+   SEARCH BOX
+========================= */
+
+.saas-search-box {
+  position: relative;
+
+  flex: 1;
+
+  min-width: 0;
+}
+
+.saas-search-box input {
+  width: 100%;
+  height: 40px;
+
+  box-sizing: border-box;
+
+  padding: 0 38px 0 36px;
+
+  border: 1px solid #f0dce3;
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #fff8fa;
+
+  color: #35112a;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.saas-search-box input::placeholder {
+  color: #b3a2a9;
+}
+
+.saas-search-box input:hover {
+  border-color: #ffc1d0;
+}
+
+.saas-search-box input:focus {
+  border-color: #ff4e7c;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(255, 78, 124, 0.1);
+}
+
+/* =========================
+   SEARCH ICON
+========================= */
+
+.saas-search-icon {
+  position: absolute;
+
+  left: 12px;
+  top: 50%;
+
+  width: 14px;
+  height: 14px;
+
+  object-fit: contain;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+
+  opacity: 0.65;
+}
+
+/* =========================
+   CLEAR BUTTON
+========================= */
+
+.saas-search-clear {
+  position: absolute;
+
+  right: 8px;
+  top: 50%;
+
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+
+  transform: translateY(-50%);
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.saas-search-clear:hover {
+  background: #ffe7ee;
+
+  transform:
+    translateY(-50%)
+    scale(1.05);
+}
+
+.saas-search-clear img {
+  width: 11px;
+  height: 11px;
+
+  object-fit: contain;
+}
+
+/* =========================
+   FILTER BUTTON
+========================= */
+
+.saas-filter-button {
+  position: relative;
+
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  gap: 7px;
+
+  padding: 0 13px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #f0dce3;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #5f4852;
+
+  font-family: inherit;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.saas-filter-button:hover {
+  background: #fff1f5;
+
+  border-color: #ffc4d2;
+
+  color: #ff4e7c;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 14px rgba(255, 78, 124, 0.08);
+}
+
+.saas-filter-button:active {
+  transform: translateY(0);
+}
+
+.saas-filter-button img {
+  width: 14px;
+  height: 14px;
+
+  object-fit: contain;
+}
+
+/* =========================
+   FILTER COUNT
+========================= */
+
+.saas-filter-count {
+  min-width: 17px;
+  height: 17px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 4px;
+
+  box-sizing: border-box;
+
+  border-radius: 20px;
+
+  background: #ff4e7c;
+
+  color: #ffffff;
+
+  font-size: 7px;
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+/* =========================
+   FOCUS
+========================= */
+
+.saas-filter-button:focus-visible,
+.saas-search-clear:focus-visible {
+  outline: 2px solid #ff4e7c;
+  outline-offset: 2px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .saas-search-filter {
+    gap: 8px;
+  }
+
+  .saas-search-box input {
+    height: 38px;
+
+    padding-left: 34px;
+  }
+
+  .saas-filter-button {
+    height: 38px;
+
+    padding: 0 11px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .saas-search-filter {
+    width: 100%;
+
+    gap: 7px;
+  }
+
+  .saas-search-box input {
+    height: 37px;
+
+    padding-left: 33px;
+    padding-right: 34px;
+
+    font-size: 9px;
+  }
+
+  .saas-search-icon {
+    left: 10px;
+
+    width: 13px;
+    height: 13px;
+  }
+
+  .saas-filter-button {
+    width: 39px;
+    height: 37px;
+
+    padding: 0;
+
+    gap: 0;
+  }
+
+  .saas-filter-button span:not(.saas-filter-count) {
+    display: none;
+  }
+
+  .saas-filter-button img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .saas-filter-count {
+    position: absolute;
+
+    top: -5px;
+    right: -5px;
+
+    min-width: 16px;
+    height: 16px;
+
+    font-size: 7px;
+  }
+}
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 350px) {
+  .saas-search-box input {
+    height: 35px;
+
+    padding-left: 30px;
+  }
+
+  .saas-filter-button {
+    width: 36px;
+    height: 35px;
+  }
+
+  .saas-search-clear {
+    right: 6px;
+  }
+}

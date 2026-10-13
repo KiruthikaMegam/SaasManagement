@@ -1,0 +1,239 @@
+.subscription-form-page {
+  width: 100%;
+  min-height: 100%;
+  padding: 28px;
+  background: #fff7fa;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.subscription-form-header {
+  margin-bottom: 22px;
+}
+
+.subscription-form-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.subscription-form-icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: #fff0f4;
+}
+
+.subscription-form-icon img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+}
+
+.page-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #ff4e7c;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.subscription-form-title h1 {
+  color: #35112a;
+  font-size: 29px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.subscription-form-title p {
+  margin-top: 6px;
+  color: #8d687d;
+  font-size: 13px;
+}
+
+/* =========================
+   FORM CARD
+========================= */
+
+.subscription-form-card {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid #f5dce5;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 7px 24px rgba(104, 28, 62, 0.05);
+}
+
+/* =========================
+   FORM SECTION
+========================= */
+
+.subscription-form-section {
+  padding: 24px;
+  border-bottom: 1px solid #f8e8ed;
+}
+
+.subscription-form-section:last-of-type {
+  border-bottom: 0;
+}
+
+.subscription-section-heading {
+  margin-bottom: 20px;
+}
+
+.subscription-section-heading h2 {
+  color: #35112a;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.subscription-section-heading p {
+  margin-top: 5px;
+  color: #947486;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.subscription-form-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.subscription-form-fields > * {
+  flex: 1 1 calc(50% - 9px);
+  min-width: 280px;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.subscription-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 11px;
+  padding: 20px 24px;
+  background: #fffafd;
+}
+
+.primary-form-button,
+.secondary-form-button {
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 17px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.primary-form-button {
+  border: 0;
+  background: #ff4e7c;
+  color: #ffffff;
+  box-shadow: 0 7px 17px rgba(255, 78, 124, 0.2);
+}
+
+.primary-form-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(255, 78, 124, 0.28);
+}
+
+.secondary-form-button {
+  border: 1px solid #ead6df;
+  background: #ffffff;
+  color: #674255;
+}
+
+.secondary-form-button:hover {
+  transform: translateY(-2px);
+  border-color: #ff4e7c;
+  color: #ff4e7c;
+}
+
+.primary-form-button img,
+.secondary-form-button img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .subscription-form-page {
+    padding: 20px;
+  }
+
+  .subscription-form-fields {
+    flex-direction: column;
+  }
+
+  .subscription-form-fields > * {
+    min-width: 100%;
+  }
+
+  .subscription-form-section {
+    padding: 20px;
+  }
+
+  .subscription-form-actions {
+    padding: 17px 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .subscription-form-page {
+    padding: 15px;
+  }
+
+  .subscription-form-title {
+    align-items: flex-start;
+  }
+
+  .subscription-form-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .subscription-form-icon img {
+    width: 23px;
+    height: 23px;
+  }
+
+  .subscription-form-title h1 {
+    font-size: 24px;
+  }
+
+  .subscription-form-section {
+    padding: 17px;
+  }
+
+  .subscription-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .primary-form-button,
+  .secondary-form-button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,188 @@
+.saas-empty-state {
+  width: 100%;
+
+  min-height: 250px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 13px;
+
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px dashed #ffc4d2;
+  border-radius: 20px;
+
+  text-align: center;
+
+  animation: saasEmptyIn 0.3s ease;
+}
+
+@keyframes saasEmptyIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Icon */
+
+.saas-empty-icon {
+  width: 68px;
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff0f4;
+
+  border: 8px solid #fff8fa;
+}
+
+.saas-empty-icon img {
+  width: 28px;
+  height: 28px;
+
+  object-fit: contain;
+
+  opacity: 0.8;
+}
+
+/* Content */
+
+.saas-empty-content h3 {
+  margin: 0;
+
+  color: #35112a;
+
+  font-size: 15px;
+  font-weight: 850;
+}
+
+.saas-empty-content p {
+  max-width: 360px;
+
+  margin: 6px auto 0;
+
+  color: #98838c;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  line-height: 1.6;
+}
+
+/* Button */
+
+.saas-empty-button {
+  min-height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-top: 4px;
+
+  padding: 0 14px;
+
+  border: 1px solid #35112a;
+  border-radius: 10px;
+
+  background: #35112a;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 15px rgba(53, 17, 42, 0.14);
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.saas-empty-button img {
+  width: 11px;
+  height: 11px;
+
+  object-fit: contain;
+}
+
+.saas-empty-button:hover {
+  background: #ff4e7c;
+
+  border-color: #ff4e7c;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(255, 78, 124, 0.2);
+}
+
+/* Tablet */
+
+@media (max-width: 700px) {
+  .saas-empty-state {
+    min-height: 220px;
+
+    padding: 25px;
+  }
+
+  .saas-empty-icon {
+    width: 62px;
+    height: 62px;
+  }
+
+  .saas-empty-icon img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .saas-empty-state {
+    min-height: 200px;
+
+    padding: 22px 17px;
+
+    border-radius: 16px;
+  }
+
+  .saas-empty-content h3 {
+    font-size: 13px;
+  }
+
+  .saas-empty-content p {
+    max-width: 280px;
+
+    font-size: 9px;
+  }
+
+  .saas-empty-button {
+    min-height: 37px;
+  }
+}

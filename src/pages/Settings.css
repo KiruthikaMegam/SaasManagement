@@ -1,0 +1,386 @@
+/* =========================================
+   SETTINGS PAGE
+========================================= */
+
+.settings-page {
+  width: 100%;
+  min-height: 100%;
+  padding: 28px;
+  background: #fff7fa;
+  animation: settingsFadeIn 0.35s ease;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.settings-header {
+  margin-bottom: 24px;
+}
+
+.settings-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.settings-title-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: #ffe0e9;
+  border: 1px solid #ffc3d2;
+}
+
+.settings-title-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.settings-title-wrapper h1 {
+  margin: 0 0 5px;
+  color: #35112a;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.settings-title-wrapper p {
+  margin: 0;
+  color: #876b7a;
+  font-size: 14px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.settings-card {
+  margin-bottom: 20px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #f2d9e1;
+  border-radius: 16px;
+  box-shadow: 0 6px 22px rgba(105, 28, 57, 0.04);
+}
+
+.settings-card-header {
+  padding: 21px 24px;
+  border-bottom: 1px solid #f2e2e7;
+}
+
+.settings-card-header h2 {
+  margin: 0 0 5px;
+  color: #35112a;
+  font-size: 17px;
+}
+
+.settings-card-header p {
+  margin: 0;
+  color: #927884;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   FIELDS
+========================================= */
+
+.settings-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 24px;
+}
+
+.settings-field {
+  flex: 1 1 280px;
+  min-width: 0;
+}
+
+.settings-field label {
+  display: block;
+  margin-bottom: 7px;
+  color: #4b2039;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.settings-field input,
+.settings-field select {
+  width: 100%;
+  height: 44px;
+  padding: 0 13px;
+  border: 1px solid #e6cbd4;
+  border-radius: 9px;
+  outline: none;
+  background: #ffffff;
+  color: #35112a;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.settings-field input::placeholder {
+  color: #b49aa5;
+}
+
+.settings-field input:hover,
+.settings-field select:hover {
+  border-color: #f1a5b9;
+}
+
+.settings-field input:focus,
+.settings-field select:focus {
+  border-color: #ff4e7c;
+  box-shadow: 0 0 0 3px rgba(255, 78, 124, 0.1);
+}
+
+/* =========================================
+   NOTIFICATIONS
+========================================= */
+
+.settings-notifications {
+  padding: 4px 24px;
+}
+
+.settings-toggle-row {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 17px 0;
+  border-bottom: 1px solid #f4e7eb;
+  cursor: pointer;
+}
+
+.settings-toggle-row:last-child {
+  border-bottom: none;
+}
+
+.settings-toggle-row > div {
+  min-width: 0;
+}
+
+.settings-toggle-row strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #4b2039;
+  font-size: 14px;
+}
+
+.settings-toggle-row span {
+  display: block;
+  color: #927884;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.settings-toggle-row input {
+  position: relative;
+  width: 42px;
+  height: 23px;
+  flex-shrink: 0;
+  appearance: none;
+  border-radius: 20px;
+  outline: none;
+  background: #e8d7dd;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.settings-toggle-row input::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: left 0.2s ease;
+}
+
+.settings-toggle-row input:checked {
+  background: #ff4e7c;
+}
+
+.settings-toggle-row input:checked::after {
+  left: 22px;
+}
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+  padding-bottom: 20px;
+}
+
+.settings-reset-button,
+.settings-save-button {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 18px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.settings-reset-button img,
+.settings-save-button img {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+}
+
+.settings-reset-button {
+  border: 1px solid #e6cbd4;
+  background: #ffffff;
+  color: #684254;
+}
+
+.settings-reset-button:hover {
+  background: #fff0f4;
+  transform: translateY(-1px);
+}
+
+.settings-save-button {
+  border: 1px solid #ff4e7c;
+  background: #ff4e7c;
+  color: #ffffff;
+  box-shadow: 0 5px 14px rgba(255, 78, 124, 0.2);
+}
+
+.settings-save-button:hover {
+  background: #ed3f6c;
+  box-shadow: 0 7px 18px rgba(255, 78, 124, 0.28);
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes settingsFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .settings-page {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .settings-page {
+    padding: 16px;
+  }
+
+  .settings-title-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .settings-title-icon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .settings-title-wrapper h1 {
+    font-size: 22px;
+  }
+
+  .settings-title-wrapper p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .settings-card-header {
+    padding: 18px 16px;
+  }
+
+  .settings-fields {
+    display: block;
+    padding: 18px 16px;
+  }
+
+  .settings-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .settings-field:last-child {
+    margin-bottom: 0;
+  }
+
+  .settings-notifications {
+    padding: 4px 16px;
+  }
+
+  .settings-toggle-row {
+    align-items: flex-start;
+  }
+
+  .settings-actions {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .settings-reset-button,
+  .settings-save-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .settings-page {
+    padding: 12px;
+  }
+
+  .settings-title-wrapper {
+    gap: 10px;
+  }
+
+  .settings-title-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .settings-title-wrapper h1 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,405 @@
+.saas-stat-card {
+  position: relative;
+
+  width: 100%;
+  min-height: 168px;
+
+  box-sizing: border-box;
+
+  padding: 17px;
+
+  overflow: hidden;
+
+  border: 1px solid #f0dce3;
+  border-radius: 17px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 25px rgba(53, 17, 42, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+
+  animation: statCardEnter 0.45s ease;
+}
+
+.saas-stat-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #ffd1dd;
+
+  box-shadow:
+    0 15px 35px rgba(53, 17, 42, 0.1);
+}
+
+/* =========================
+   DECORATIVE CIRCLE
+========================= */
+
+.saas-stat-card-decoration {
+  position: absolute;
+
+  width: 105px;
+  height: 105px;
+
+  top: -48px;
+  right: -35px;
+
+  border-radius: 50%;
+
+  background: var(--stat-accent);
+
+  opacity: 0.08;
+
+  pointer-events: none;
+}
+
+.saas-stat-card-decoration::after {
+  content: "";
+
+  position: absolute;
+
+  width: 65px;
+  height: 65px;
+
+  top: 30px;
+  left: -25px;
+
+  border-radius: 50%;
+
+  background: var(--stat-accent);
+
+  opacity: 0.5;
+}
+
+/* =========================
+   TOP SECTION
+========================= */
+
+.saas-stat-card-top {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 34px;
+}
+
+.saas-stat-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: color-mix(
+    in srgb,
+    var(--stat-accent) 10%,
+    #ffffff
+  );
+
+  border: 1px solid color-mix(
+    in srgb,
+    var(--stat-accent) 18%,
+    #ffffff
+  );
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.saas-stat-card:hover .saas-stat-icon {
+  transform: scale(1.07) rotate(-2deg);
+}
+
+.saas-stat-icon img {
+  width: 17px;
+  height: 17px;
+
+  object-fit: contain;
+}
+
+/* =========================
+   CHANGE BADGE
+========================= */
+
+.saas-stat-change {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 21px;
+
+  padding: 3px 7px;
+
+  box-sizing: border-box;
+
+  border-radius: 20px;
+
+  background: #eaf9f0;
+
+  color: #1d9a55;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.saas-stat-change-negative {
+  background: #fff0f2;
+  color: #d63d59;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.saas-stat-card-content {
+  position: relative;
+  z-index: 1;
+
+  margin-top: 14px;
+}
+
+.saas-stat-title {
+  margin: 0 0 5px;
+
+  color: #927d86;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.saas-stat-value {
+  margin: 0;
+
+  color: #35112a;
+
+  font-size: 22px;
+  font-weight: 900;
+
+  letter-spacing: -0.5px;
+
+  line-height: 1.15;
+
+  word-break: break-word;
+}
+
+.saas-stat-subtitle {
+  margin: 6px 0 0;
+
+  color: #ae9ba3;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+/* =========================
+   BOTTOM
+========================= */
+
+.saas-stat-card-bottom {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-top: 17px;
+}
+
+.saas-stat-progress {
+  flex: 1;
+
+  height: 5px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #f3e5e9;
+}
+
+.saas-stat-progress span {
+  display: block;
+
+  width: 68%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: var(--stat-accent);
+
+  animation: statProgress 0.8s ease;
+}
+
+@keyframes statProgress {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 68%;
+  }
+}
+
+/* =========================
+   ARROW BUTTON
+========================= */
+
+.saas-stat-arrow {
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  padding: 0;
+
+  border: 1px solid #f0dce3;
+  border-radius: 8px;
+
+  background: #fff8fa;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.saas-stat-arrow:hover {
+  transform: translateX(2px);
+
+  background: var(--stat-accent);
+
+  border-color: var(--stat-accent);
+}
+
+.saas-stat-arrow img {
+  width: 12px;
+  height: 12px;
+
+  object-fit: contain;
+
+  transition:
+    filter 0.2s ease;
+}
+
+.saas-stat-arrow:hover img {
+  filter: brightness(0) invert(1);
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes statCardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+  .saas-stat-card {
+    min-height: 160px;
+    padding: 15px;
+  }
+
+  .saas-stat-value {
+    font-size: 20px;
+  }
+
+  .saas-stat-card-content {
+    margin-top: 12px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .saas-stat-card {
+    min-height: 155px;
+  }
+
+  .saas-stat-value {
+    font-size: 20px;
+  }
+
+  .saas-stat-title {
+    font-size: 9px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .saas-stat-card {
+    min-height: 150px;
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .saas-stat-icon {
+    width: 31px;
+    height: 31px;
+  }
+
+  .saas-stat-icon img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .saas-stat-change {
+    font-size: 7px;
+    padding: 3px 6px;
+  }
+
+  .saas-stat-value {
+    font-size: 18px;
+  }
+
+  .saas-stat-subtitle {
+    font-size: 7px;
+  }
+
+  .saas-stat-arrow {
+    width: 25px;
+    height: 25px;
+  }
+}

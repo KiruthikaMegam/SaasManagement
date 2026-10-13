@@ -1,0 +1,143 @@
+.saas-status-badge {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  min-height: 27px;
+
+  padding: 5px 9px;
+
+  border: 1px solid transparent;
+  border-radius: 999px;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.saas-status-badge:hover {
+  transform: translateY(-1px);
+}
+
+/* Dot */
+
+.saas-status-dot {
+  width: 6px;
+  height: 6px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  animation: saasStatusPulse 2s infinite;
+}
+
+@keyframes saasStatusPulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.55;
+    transform: scale(0.8);
+  }
+}
+
+/* Success */
+
+.saas-status-success {
+  background: #ecfaf2;
+
+  border-color: #ccefdc;
+
+  color: #17834a;
+}
+
+.saas-status-success .saas-status-dot {
+  background: #22a85f;
+}
+
+/* Warning */
+
+.saas-status-warning {
+  background: #fff7e8;
+
+  border-color: #f7dfae;
+
+  color: #a86b00;
+}
+
+.saas-status-warning .saas-status-dot {
+  background: #efa900;
+}
+
+/* Danger */
+
+.saas-status-danger {
+  background: #fff0f2;
+
+  border-color: #ffd2da;
+
+  color: #d63d59;
+}
+
+.saas-status-danger .saas-status-dot {
+  background: #ed4b68;
+}
+
+/* Info */
+
+.saas-status-info {
+  background: #eef5ff;
+
+  border-color: #d4e4ff;
+
+  color: #3774c9;
+}
+
+.saas-status-info .saas-status-dot {
+  background: #4386df;
+}
+
+/* Default */
+
+.saas-status-default {
+  background: #f5f2f4;
+
+  border-color: #e7dfe3;
+
+  color: #76656d;
+}
+
+.saas-status-default .saas-status-dot {
+  background: #9a8991;
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .saas-status-badge {
+    min-height: 25px;
+
+    padding: 5px 8px;
+
+    gap: 5px;
+
+    font-size: 8px;
+  }
+
+  .saas-status-dot {
+    width: 5px;
+    height: 5px;
+  }
+}

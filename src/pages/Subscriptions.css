@@ -1,0 +1,530 @@
+.subscriptions-page {
+  width: 100%;
+  min-height: 100%;
+  padding: 28px;
+  background: #fff7fa;
+  box-sizing: border-box;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.subscriptions-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.page-label {
+  display: block;
+  margin-bottom: 7px;
+  color: #ff4e7c;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.subscriptions-header h1 {
+  margin: 0;
+  color: #35112a;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.subscriptions-header p {
+  margin: 8px 0 0;
+  color: #8d687d;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.primary-action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 10px;
+  background: #ff4e7c;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 78, 124, 0.2);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.primary-action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(255, 78, 124, 0.28);
+}
+
+.primary-action-button img {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+}
+
+/* =========================
+   STATISTICS
+========================= */
+
+.subscription-stat-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.subscription-stat-card {
+  flex: 1 1 210px;
+  min-width: 190px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid #f5dce5;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 5px 18px rgba(104, 28, 62, 0.05);
+  box-sizing: border-box;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.subscription-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(104, 28, 62, 0.09);
+}
+
+.subscription-stat-icon {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #fff0f4;
+}
+
+.subscription-stat-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.subscription-stat-card span {
+  display: block;
+  margin-bottom: 4px;
+  color: #927486;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.subscription-stat-card strong {
+  color: #35112a;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+/* =========================
+   SEARCH AND FILTER TOOLBAR
+========================= */
+
+.subscriptions-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+  padding: 15px;
+  border: 1px solid #f5dce5;
+  border-radius: 13px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+/* Search stays on the left */
+.subscriptions-search {
+  flex: 1 1 300px;
+  min-width: 0;
+  max-width: 420px;
+}
+
+/* Allow the SearchFilter component to use the available width */
+.subscriptions-search > * {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Dropdowns stay aligned on the right */
+.subscription-filter-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 0 1 auto;
+  gap: 10px;
+  min-width: 0;
+}
+
+.subscription-filter-group select {
+  width: 145px;
+  min-width: 120px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #ead5dd;
+  border-radius: 9px;
+  outline: none;
+  background: #ffffff;
+  color: #573446;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.subscription-filter-group select:focus {
+  border-color: #ff4e7c;
+  box-shadow: 0 0 0 3px rgba(255, 78, 124, 0.1);
+}
+
+/* =========================
+   TABLE CARD
+========================= */
+
+.subscriptions-table-card {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #f5dce5;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 5px 18px rgba(104, 28, 62, 0.05);
+}
+
+/* Works with the table rendered by DataTable */
+.subscriptions-table-card table {
+  width: 100%;
+  min-width: 1050px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
+}
+
+/* Table headers */
+.subscriptions-table-card th {
+  padding: 15px 16px;
+  border-bottom: 1px solid #f5dce5;
+  background: #fff0f4;
+  color: #60364b;
+  font-size: 12px;
+  font-weight: 750;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.subscriptions-table-card th.sortable-header {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.subscriptions-table-card th.sortable-header:hover {
+  color: #ff4e7c;
+}
+
+/* Table cells */
+.subscriptions-table-card td {
+  padding: 13px 16px;
+  border-bottom: 1px solid #f8eaf0;
+  color: #755368;
+  font-size: 13px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.subscriptions-table-card tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.subscriptions-table-card tbody tr:hover {
+  background: #fffafd;
+}
+
+/* =========================
+   SUBSCRIPTION CELL
+========================= */
+
+.subscription-main-cell {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 190px;
+}
+
+.subscription-icon-box {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #fff0f4;
+}
+
+.subscription-icon-box img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.subscription-main-info {
+  min-width: 0;
+}
+
+.subscription-main-cell strong {
+  display: block;
+  overflow: hidden;
+  color: #35112a;
+  font-size: 13px;
+  font-weight: 750;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.subscription-main-cell span {
+  display: block;
+  max-width: 170px;
+  margin-top: 3px;
+  overflow: hidden;
+  color: #927486;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.subscription-plan {
+  color: #4d203b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.billing-cycle {
+  color: #755368;
+  font-size: 13px;
+}
+
+.subscription-amount {
+  color: #35112a;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.subscription-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.table-icon-button {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid #f0dce3;
+  border-radius: 8px;
+  background: #ffffff;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.table-icon-button:hover {
+  transform: translateY(-2px);
+  border-color: #ff4e7c;
+  background: #fff1f5;
+}
+
+.table-icon-button.delete:hover {
+  border-color: #e83c68;
+  background: #fff0f3;
+}
+
+.table-icon-button img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* =========================
+   PAGINATION
+========================= */
+
+.subscriptions-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.subscriptions-pagination > button,
+.pagination-pages button {
+  min-width: 36px;
+  height: 36px;
+  padding: 0 11px;
+  border: 1px solid #ead5dd;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #674255;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.subscriptions-pagination > button:hover:not(:disabled),
+.pagination-pages button:hover {
+  border-color: #ff4e7c;
+  color: #ff4e7c;
+}
+
+.subscriptions-pagination button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.pagination-pages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pagination-pages button.active {
+  border-color: #ff4e7c;
+  background: #ff4e7c;
+  color: #ffffff;
+}
+
+/* =========================
+   RESPONSIVE: TABLET
+========================= */
+
+@media (max-width: 1100px) {
+  .subscriptions-page {
+    padding: 24px;
+  }
+
+  .subscriptions-header {
+    align-items: flex-start;
+  }
+
+  .subscriptions-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .subscriptions-search {
+    width: 100%;
+    max-width: none;
+    flex-basis: auto;
+  }
+
+  .subscription-filter-group {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .subscription-filter-group select {
+    flex: 1 1 0;
+    width: auto;
+  }
+}
+
+/* =========================
+   RESPONSIVE: MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .subscriptions-page {
+    padding: 20px;
+  }
+
+  .subscriptions-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .primary-action-button {
+    width: 100%;
+  }
+
+  .subscription-stat-card {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 0;
+  }
+
+  .subscriptions-table-card {
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .subscriptions-page {
+    padding: 15px;
+  }
+
+  .subscriptions-header h1 {
+    font-size: 25px;
+  }
+
+  .subscription-stat-card {
+    flex-basis: 100%;
+  }
+
+  .subscriptions-toolbar {
+    padding: 12px;
+  }
+
+  .subscription-filter-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .subscription-filter-group select {
+    width: 100%;
+    flex: auto;
+  }
+
+  .subscriptions-pagination {
+    gap: 8px;
+  }
+}

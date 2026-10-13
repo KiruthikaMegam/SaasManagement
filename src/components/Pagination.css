@@ -1,0 +1,269 @@
+.saas-pagination {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 18px;
+  padding: 13px 15px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #ffe1e9;
+  border-radius: 16px;
+
+  box-shadow:
+    0 5px 18px rgba(53, 17, 42, 0.04);
+}
+
+/* Information */
+
+.saas-pagination-info {
+  color: #927d86;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.saas-pagination-info strong {
+  color: #35112a;
+
+  font-weight: 800;
+}
+
+/* Controls */
+
+.saas-pagination-controls {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.saas-pagination-pages {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  min-width: 0;
+}
+
+/* Page and Arrow */
+
+.saas-pagination-page,
+.saas-pagination-arrow {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid #ead9df;
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #6f5a64;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Page Hover */
+
+.saas-pagination-page:hover {
+  border-color: #ff9fb7;
+
+  background: #fff2f5;
+
+  color: #ff4e7c;
+
+  transform: translateY(-2px);
+}
+
+/* Active Page */
+
+.saas-pagination-page-active {
+  border-color: #35112a;
+
+  background: #35112a;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 5px 12px rgba(53, 17, 42, 0.16);
+}
+
+.saas-pagination-page-active:hover {
+  border-color: #35112a;
+
+  background: #35112a;
+
+  color: #ffffff;
+
+  transform: none;
+}
+
+/* Ellipsis */
+
+.saas-pagination-ellipsis {
+  width: 22px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #927d86;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* Arrow */
+
+.saas-pagination-arrow img {
+  width: 13px;
+  height: 13px;
+
+  object-fit: contain;
+
+  transition: transform 0.2s ease;
+}
+
+.saas-pagination-arrow:hover:not(:disabled) {
+  border-color: #ff9fb7;
+
+  background: #fff2f5;
+
+  transform: translateY(-2px);
+}
+
+.saas-pagination-arrow:first-child:hover:not(:disabled) img {
+  transform: translateX(-2px);
+}
+
+.saas-pagination-arrow:last-child:hover:not(:disabled) img {
+  transform: translateX(2px);
+}
+
+/* Disabled */
+
+.saas-pagination-arrow:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+
+  background: #faf6f7;
+}
+
+/* Focus */
+
+.saas-pagination-page:focus-visible,
+.saas-pagination-arrow:focus-visible {
+  outline: 2px solid #ff4e7c;
+  outline-offset: 2px;
+}
+
+/* Tablet */
+
+@media (max-width: 700px) {
+  .saas-pagination {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 11px;
+  }
+
+  .saas-pagination-info {
+    order: 2;
+  }
+
+  .saas-pagination-controls {
+    order: 1;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .saas-pagination {
+    padding: 12px;
+  }
+
+  .saas-pagination-controls {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .saas-pagination-pages {
+    max-width: 190px;
+
+    overflow-x: auto;
+
+    padding: 2px;
+
+    scrollbar-width: none;
+  }
+
+  .saas-pagination-pages::-webkit-scrollbar {
+    display: none;
+  }
+
+  .saas-pagination-page,
+  .saas-pagination-arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .saas-pagination-ellipsis {
+    height: 32px;
+  }
+}
+
+/* Very Small Mobile */
+
+@media (max-width: 350px) {
+  .saas-pagination-page,
+  .saas-pagination-arrow {
+    width: 30px;
+    height: 30px;
+  }
+
+  .saas-pagination-controls {
+    gap: 4px;
+  }
+
+  .saas-pagination-pages {
+    gap: 3px;
+  }
+
+  .saas-pagination-ellipsis {
+    width: 18px;
+    height: 30px;
+  }
+}

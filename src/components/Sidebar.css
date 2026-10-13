@@ -1,0 +1,412 @@
+.saas-sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 1000;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 20px 14px;
+  background: #ffffff;
+  border-right: 1px solid #f2dce4;
+  box-shadow: 8px 0 30px rgba(53, 17, 42, 0.05);
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: transform 0.3s ease;
+}
+
+.saas-sidebar-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  margin-bottom: 22px;
+}
+
+.saas-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 0 6px;
+  color: #35112a;
+  text-decoration: none;
+}
+
+.saas-sidebar-logo > img {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.saas-sidebar-logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.saas-sidebar-logo-text strong {
+  color: #35112a;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.saas-sidebar-logo-text span {
+  color: #a58e98;
+  font-size: 10px;
+}
+
+.saas-sidebar-workspace {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  padding: 12px;
+  border: 1px solid #ffe2e9;
+  border-radius: 13px;
+  background: #fff7f9;
+}
+
+.saas-workspace-dot {
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 4px #dcfce7;
+}
+
+.saas-sidebar-workspace div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.saas-sidebar-workspace strong {
+  color: #35112a;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.saas-sidebar-workspace span:last-child {
+  color: #9b858e;
+  font-size: 9px;
+}
+
+.saas-sidebar-nav {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  min-height: 0;
+}
+
+.saas-sidebar-section-title {
+  margin: 0 0 8px;
+  padding: 0 10px;
+  color: #b39ca5;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.saas-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.saas-sidebar-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  min-height: 43px;
+  box-sizing: border-box;
+  padding: 9px 11px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  background: transparent;
+  color: #78636c;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.saas-sidebar-link:hover {
+  border-color: #ffd8e3;
+  background: #fff1f5;
+  color: #ff4e7c;
+  transform: translateX(2px);
+}
+
+.saas-sidebar-link.active {
+  border-color: #ff4e7c;
+  background: linear-gradient(135deg, #ff4e7c, #ff7097);
+  color: #ffffff;
+  box-shadow: 0 7px 17px rgba(255, 78, 124, 0.2);
+}
+
+.saas-sidebar-link.active:hover {
+  transform: none;
+}
+
+.saas-sidebar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.saas-sidebar-icon img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.saas-sidebar-link:hover .saas-sidebar-icon img {
+  transform: scale(1.08);
+}
+
+.saas-sidebar-link.active .saas-sidebar-icon img {
+  filter: brightness(0) invert(1);
+}
+
+.saas-sidebar-link-text {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.saas-sidebar-active-dot {
+  width: 5px;
+  height: 5px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.saas-sidebar-link.active .saas-sidebar-active-dot {
+  background: #ffffff;
+}
+
+.saas-sidebar-footer {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid #f4e7eb;
+}
+
+.saas-sidebar-footer-card {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 10px;
+  border: 1px solid #f3dfe6;
+  border-radius: 13px;
+  background: #fff8fa;
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.saas-sidebar-footer-card:hover {
+  background: #fff0f4;
+}
+
+.saas-footer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: #ffffff;
+}
+
+.saas-footer-icon img {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+}
+
+.saas-footer-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.saas-footer-content strong {
+  color: #35112a;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.saas-footer-content span {
+  color: #9b858e;
+  font-size: 9px;
+}
+
+.saas-footer-status {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.saas-sidebar-version {
+  margin: 12px 0 0;
+  color: #b39ca5;
+  font-size: 9px;
+  text-align: center;
+}
+
+.saas-mobile-menu-button {
+  display: none;
+}
+
+.saas-sidebar-mobile-button {
+  display: none;
+}
+
+.saas-sidebar-close {
+  display: none;
+}
+
+.saas-sidebar-overlay {
+  display: none;
+}
+
+.saas-sidebar button:focus-visible,
+.saas-sidebar a:focus-visible {
+  outline: 2px solid #ff4e7c;
+  outline-offset: 3px;
+}
+
+.saas-sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.saas-sidebar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #f2cbd7;
+}
+
+@media (max-width: 1100px) and (min-width: 769px) {
+  .saas-sidebar {
+    width: 220px;
+    padding: 18px 12px;
+  }
+
+  .saas-sidebar-link {
+    min-height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .saas-sidebar {
+    width: 270px;
+    max-width: 82vw;
+    padding: 18px 14px;
+    transform: translateX(-105%);
+    z-index: 1200;
+    box-shadow: 12px 0 35px rgba(53, 17, 42, 0.15);
+  }
+
+  .saas-sidebar.saas-sidebar-open {
+    transform: translateX(0);
+  }
+
+  .saas-sidebar-mobile-button {
+    position: fixed;
+    top: 16px;
+    left: 14px;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid #f2dce4;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(53, 17, 42, 0.08);
+    cursor: pointer;
+  }
+
+  .saas-sidebar-mobile-button img {
+    width: 19px;
+    height: 19px;
+    object-fit: contain;
+  }
+
+  .saas-sidebar-close {
+    position: absolute;
+    top: 7px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 1px solid #f2dce4;
+    border-radius: 8px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+
+  .saas-sidebar-close img {
+    width: 13px;
+    height: 13px;
+    object-fit: contain;
+  }
+
+  .saas-sidebar-overlay.saas-sidebar-overlay-open {
+    position: fixed;
+    inset: 0;
+    z-index: 1150;
+    display: block;
+    background: rgba(53, 17, 42, 0.38);
+    backdrop-filter: blur(2px);
+  }
+}
+
+@media (max-width: 480px) {
+  .saas-sidebar {
+    width: 250px;
+  }
+
+  .saas-sidebar-mobile-button {
+    top: 15px;
+    left: 12px;
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .saas-sidebar,
+  .saas-sidebar-link,
+  .saas-sidebar-icon img {
+    transition: none;
+  }
+}

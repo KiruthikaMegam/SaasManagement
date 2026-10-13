@@ -1,0 +1,319 @@
+.saas-confirm-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1200;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(53, 17, 42, 0.5);
+
+  backdrop-filter: blur(5px);
+
+  animation: saasConfirmOverlayIn 0.2s ease;
+}
+
+@keyframes saasConfirmOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal */
+
+.saas-confirm-modal {
+  position: relative;
+
+  width: 100%;
+  max-width: 430px;
+
+  padding: 30px 28px 25px;
+
+  background: #ffffff;
+
+  border-radius: 24px;
+
+  text-align: center;
+
+  box-shadow:
+    0 25px 70px rgba(53, 17, 42, 0.22);
+
+  animation: saasConfirmIn 0.25s ease;
+}
+
+@keyframes saasConfirmIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Close */
+
+.saas-confirm-close {
+  position: absolute;
+
+  top: 13px;
+  right: 13px;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #ead9df;
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.saas-confirm-close img {
+  width: 11px;
+  height: 11px;
+
+  object-fit: contain;
+}
+
+.saas-confirm-close:hover {
+  background: #fff0f4;
+
+  transform: rotate(5deg);
+}
+
+/* Icon */
+
+.saas-confirm-icon {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 17px;
+
+  border-radius: 50%;
+}
+
+.saas-confirm-danger .saas-confirm-icon {
+  background: #fff0f3;
+
+  border: 8px solid #fff8f9;
+}
+
+.saas-confirm-warning .saas-confirm-icon {
+  background: #fff7e8;
+
+  border: 8px solid #fffbf3;
+}
+
+.saas-confirm-icon img {
+  width: 21px;
+  height: 21px;
+
+  object-fit: contain;
+}
+
+/* Content */
+
+.saas-confirm-content h2 {
+  margin: 0;
+
+  color: #35112a;
+
+  font-size: 17px;
+  font-weight: 850;
+}
+
+.saas-confirm-content p {
+  max-width: 330px;
+
+  margin: 8px auto 0;
+
+  color: #927d86;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  line-height: 1.6;
+}
+
+/* Actions */
+
+.saas-confirm-actions {
+  display: flex;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 22px;
+}
+
+.saas-confirm-cancel,
+.saas-confirm-submit {
+  min-width: 105px;
+  height: 39px;
+
+  padding: 0 15px;
+
+  border-radius: 10px;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.saas-confirm-cancel {
+  border: 1px solid #e8dce1;
+
+  background: #ffffff;
+
+  color: #6d5962;
+}
+
+.saas-confirm-cancel:hover {
+  border-color: #ffadc0;
+
+  background: #fff3f6;
+
+  color: #35112a;
+
+  transform: translateY(-1px);
+}
+
+.saas-confirm-submit {
+  border: 1px solid #d63d59;
+
+  background: #d63d59;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 5px 14px rgba(214, 61, 89, 0.18);
+}
+
+.saas-confirm-submit:hover {
+  border-color: #b92e48;
+
+  background: #b92e48;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 17px rgba(214, 61, 89, 0.24);
+}
+
+/* Warning */
+
+.saas-confirm-warning .saas-confirm-submit {
+  border-color: #d99000;
+
+  background: #d99000;
+
+  box-shadow:
+    0 5px 14px rgba(217, 144, 0, 0.18);
+}
+
+.saas-confirm-warning .saas-confirm-submit:hover {
+  border-color: #b97800;
+
+  background: #b97800;
+}
+
+/* Tablet */
+
+@media (max-width: 600px) {
+  .saas-confirm-overlay {
+    padding: 15px;
+  }
+
+  .saas-confirm-modal {
+    max-width: 400px;
+
+    padding: 27px 21px 22px;
+
+    border-radius: 21px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 450px) {
+  .saas-confirm-overlay {
+    align-items: flex-end;
+
+    padding: 0;
+  }
+
+  .saas-confirm-modal {
+    max-width: none;
+
+    padding: 27px 18px 20px;
+
+    border-radius: 22px 22px 0 0;
+
+    animation: saasConfirmMobileIn 0.25s ease;
+  }
+
+  @keyframes saasConfirmMobileIn {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .saas-confirm-content h2 {
+    font-size: 15px;
+  }
+
+  .saas-confirm-content p {
+    font-size: 9px;
+  }
+
+  .saas-confirm-actions {
+    width: 100%;
+  }
+
+  .saas-confirm-cancel,
+  .saas-confirm-submit {
+    flex: 1;
+
+    height: 41px;
+  }
+}
